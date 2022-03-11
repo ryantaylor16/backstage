@@ -31,6 +31,7 @@ spec:
     displayName: Team Whiskey
     email: solutions@transposit.com
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg?v=1646948885
+  parent: Whiskey
   children: [Neat]
   members: [ryan,cory,rob,nina,paul,steve]
   apiVersion: backstage.io/v1alpha1
@@ -46,7 +47,8 @@ spec:
     displayName: Neat (RT Special)
     email: solutions@transposit.com
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg?v=1646948885
-  parent: [Whiskey]
+  parent: Whiskey
+  children: [Neat]
   members: [ryan,cory]
 ---
 apiVersion: backstage.io/v1alpha1
