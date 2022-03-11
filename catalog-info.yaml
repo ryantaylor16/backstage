@@ -36,6 +36,7 @@ spec:
   members: [ryan,cory,rob,nina,paul,steve]
   apiVersion: backstage.io/v1alpha1
 ---
+apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: Neat
