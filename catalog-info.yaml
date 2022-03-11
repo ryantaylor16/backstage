@@ -5,6 +5,9 @@ metadata:
   description: The AllTeamz Product 
   labels:
     "critical": "true"
+    "release" : "stable"
+    "environment" : "production"
+    "tier" : "frontend"
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
