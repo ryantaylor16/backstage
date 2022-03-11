@@ -17,7 +17,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: artist-relations-team
+  owner: Whiskey
   system: public-websites
 ---
 apiVersion: backstage.io/v1alpha1
@@ -33,7 +33,7 @@ spec:
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg?v=1646948885
   parent: Whiskey
   children: [Neat]
-  members: [ryan,cory,rob,nina,paul,steve]
+  members: [ryan,cory]
   apiVersion: backstage.io/v1alpha1
 ---
 apiVersion: backstage.io/v1alpha1
