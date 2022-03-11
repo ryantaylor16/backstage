@@ -1,10 +1,60 @@
 # catalog-info.yaml
-apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: org-data
-spec:
-  type: url
-  targets:
-    - group.yaml
+# apiVersion: backstage.io/v1alpha1
+# kind: Location
+# metadata:
+#  name: org-data
+#spec:
+#  type: url
+#  targets:
+#    - group.yaml
 #    - http://github.com/myorg/myproject/org-data-dump/catalog-info-consultants.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Whiskey
+  description: Whisky or whiskey is a type of distilled alcoholic beverage made from fermented grain mash. Various grains (which may be malted) are used for different varieties, including barley, corn, rye, and wheat. Whisky is typically aged in wooden casks, which are often old sherry casks or may also be made of charred white oak.
+spec:
+  type: service-group
+  profile:
+    displayName: Team Whiskey
+    email: solutions@transposit.com
+    picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg?v=1646948885
+  parent: []
+  children: [Neat]
+  members: [ryan,cory,rob,nina,paul,steve]
+  apiVersion: backstage.io/v1alpha1
+---
+kind: Group
+metadata:
+  name: Neat
+  description: The best way to drink whiskey neat is out of a lowball cocktail glass at room temperature. Two ounces is the correct serving size for this drink but bartenders shouldn’t use a jigger or other measuring tool for this drink. The goal of a drink served neat is to go straight from the bottle to the glass with as little interruption as possible.
+spec:
+  type: service-group
+  profile:
+    displayName: Neat (RT Special)
+    email: solutions@transposit.com
+    picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg?v=1646948885
+  parent: [Whiskey]
+  members: [ryan,cory]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ryan
+spec:
+  profile:
+    displayName: Ryan Taylor
+    email: ryan@transposit.com
+    picture: https://www.svgrepo.com/show/241591/clown-avatar.svg
+  memberOf: [Whiskey]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: cory
+spec:
+  profile:
+    displayName: Cory Finger
+    email: cory@transposit.com
+    picture: https://www.shareicon.net/data/512x512/2016/04/22/753637_wizard_512x512.png
+  memberOf: [Whiskey]
