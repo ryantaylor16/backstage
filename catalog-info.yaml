@@ -2,17 +2,23 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: allteamz-home
-  description: the website for allteamz.com 
+  description: The AllTeamz Product 
   labels:
-    critical: custom_label_value
+    "critical": "true"
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
   tags:
     - java
   links:
-    - url: https://admin.example-org.com
-      title: Admin Dashboard
+    - url: https://allteamz.com
+      title: Business Home
+      icon: dashboard
+    - url: https://softballbound.com
+      title: Softball Bound
+      icon: dashboard
+    - url: https://baseballbound.com
+      title: Baseball Bound
       icon: dashboard
 spec:
   type: website
