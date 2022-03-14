@@ -70,7 +70,7 @@ metadata:
     "tier" : "frontend"
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main/docs
-    backstage.io/managed-by-location: url:https://github.com/ryantaylor16/backstage/blob/main/catalog-info.yaml
+    github.com/project-slug: ryantaylor16/backstage
   tags:
     - java
     - python
