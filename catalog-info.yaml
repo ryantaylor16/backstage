@@ -80,10 +80,10 @@ metadata:
   links:
     - url: https://transposit.atlassian.net/jira/software/c/projects/MCW/boards/59
       title: Jira Board
-      icon: dashboard
+      icon: jira
     - url: https://transposit.slack.com/archives/C01G8UYMEFP
       title: Team Slack
-      icon: dashboard
+      icon: slack
 spec:
   type: service
   lifecycle: production
