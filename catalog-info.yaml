@@ -89,6 +89,10 @@ spec:
   lifecycle: production
   owner: cuttlefish-group
   system: cuttlefish-tools-system
+  dependsOn:
+    - service:neutrino
+  providesApis:
+    - starwars-graphql
 ---
 # apiVersion: backstage.io/v1alpha1
 # kind: Domain
