@@ -1,30 +1,30 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Whiskey
-  description: Whisky or whiskey is a type of distilled alcoholic beverage made from fermented grain mash. Various grains (which may be malted) are used for different varieties, including barley, corn, rye, and wheat. Whisky is typically aged in wooden casks, which are often old sherry casks or may also be made of charred white oak.
+  name: cuttlefish-group
+  description: Team Cuttlefish provides useful, extensible solutions to current and future customers by anticipating and reacting to their needs. Cuttlefish will be obsessed with building functionality in the Dev Platform and Mission Control so that Transposit users can eliminate tedium, build efficient & useful workflows, and find new and interesting ways to automate their repetitive tasks. The team will always attempt to meet the customer at their level of expertise, tailoring the approach and level of effort accordingly
 spec:
   type: service-group
   profile:
-    displayName: Team Whiskey
+    displayName: Cuttlefish Group
     email: solutions@transposit.com
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg
-  children: [Neat]
+  children: [Solutions]
   members: [ryan,cory]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Neat
-  description: The best way to drink whiskey neat is out of a lowball cocktail glass at room temperature. Two ounces is the correct serving size for this drink but bartenders shouldn’t use a jigger or other measuring tool for this drink. The goal of a drink served neat is to go straight from the bottle to the glass with as little interruption as possible.
-spec:
+  name: solutions-group
+  description: own the integrations for internal and external customers where the developer platform must provide extensible actions and connectors. Team Cuttlefish will act as the escalation point for both customer support and sales engineers where knowledge beyond their scope is required. 
+spec:  
   type: service-group
   profile:
-    displayName: Neat (RT Special)
+    displayName: Solutions Engineering Group
     email: solutions@transposit.com
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg
-  parent: Whiskey
-  children: [Neat]
+  parent: Cuttlefish
+  children: []
   members: [ryan,cory]
 ---
 apiVersion: backstage.io/v1alpha1
@@ -36,7 +36,7 @@ spec:
     displayName: Ryan Taylor
     email: ryan@transposit.com
     picture: https://www.svgrepo.com/show/241591/clown-avatar.svg
-  memberOf: [Whiskey]
+  memberOf: [Solutions]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -47,36 +47,106 @@ spec:
     displayName: Cory Finger
     email: cory@transposit.com
     picture: https://www.shareicon.net/data/512x512/2016/04/22/753637_wizard_512x512.png
-  memberOf: [Whiskey]
+  memberOf: [Solutions]
+---
+ apiVersion: backstage.io/v1alpha1
+ kind: System
+ metadata:
+   name: cuttlefish-tools-system
+   description: Handy tools that enable the Solutions Engineering organization
+ spec:
+   owner: solutions-group
+   domain: solutions
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: bound-apps
-  description: The AllTeamz Product 
+  name: cuttlefish-apps-component
+  description: The scripts, actions, runbooks, and other objects built by Cuttlefish, used by customers 
   labels:
     "critical": "true"
     "release" : "stable"
     "environment" : "production"
     "tier" : "frontend"
   annotations:
-    example.com/service-discovery: artistweb
-    circleci.com/project-slug: github/example-org/artist-website
     backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main/docs
   tags:
-    - wordpress
+    - java
+    - python
+    - javascript
+    - ruby
+    - elixir
   links:
-    - url: https://allteamz.com
-      title: Business Home
+    - url: https://transposit.atlassian.net/jira/software/c/projects/MCW/boards/59
+      title: Jira Board
       icon: dashboard
-    - url: https://softballbound.com
-      title: Softball Bound
-      icon: dashboard
-    - url: https://baseballbound.com
-      title: Baseball Bound
+    - url: https://transposit.slack.com/archives/C01G8UYMEFP
+      title: Team Slack
       icon: dashboard
 spec:
   type: service
   lifecycle: production
-  owner: Whiskey
-  system: public-websites
+  owner: cuttlefish-group
+  system: cuttlefish-tools-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: cuttlefish-domain
+  description: The Cuttlefish Domain
+spec:
+  owner: solutions-group
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cuttlefish-resource
+  description: Cuttlefish Resource
+spec:
+  type: cluster
+  owner: cuttlefish-group
+  system: cuttlefish-tools-system
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: v1beta3-demo
+  title: Test Action template
+  description: scaffolder v1beta3 template demo
+spec:
+  owner: backstage/techdocs-core
+  type: service
+
+  parameters:
+    - title: A registration form
+      description: A simple form example.
+      type: object
+      required:
+        - firstName
+        - lastName
+      properties:
+        firstName:
+          type: string
+          title: First name
+          default: Chuck
+          ui:autofocus: true
+          ui:emptyValue: ''
+          ui:autocomplete: family-name
+        lastName:
+          type: string
+          title: Last name
+          ui:emptyValue: ''
+          ui:autocomplete: given-name
+        nicknames:
+          type: array
+          items:
+            type: string
+          ui:options:
+            orderable: false
+        telephone:
+          type: string
+          title: Telephone
+          minLength: 10
+          ui:options:
+            inputType: tel
+
