@@ -89,13 +89,13 @@ spec:
   owner: cuttlefish-group
   system: cuttlefish-tools-system
 ---
-apiVersion: backstage.io/v1alpha1
-kind: Domain
-metadata:
-  name: solutions
-  description: The Solutions Domain
-spec:
-   owner: solutions-group
+# apiVersion: backstage.io/v1alpha1
+# kind: Domain
+# metadata:
+#   name: cuttlefish-domain
+#  description: The Cuttlefish Domain
+# spec:
+#   owner: solutions-group
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
