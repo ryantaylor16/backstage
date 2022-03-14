@@ -25,7 +25,7 @@ metadata:
       title: Baseball Bound
       icon: dashboard
 spec:
-  type: website
+  type: service
   lifecycle: production
   owner: Whiskey
   system: public-websites
