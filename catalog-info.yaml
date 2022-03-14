@@ -90,7 +90,7 @@ spec:
   owner: cuttlefish-group
   system: cuttlefish-tools-system
   dependsOn:
-    - service:neutrino
+    - other:Neutrino
   providesApis:
     - starwars-graphql
 ---
