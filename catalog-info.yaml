@@ -107,3 +107,10 @@ spec:
   owner: cuttlefish-group
   system: cuttlefish-tools-system
 ---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: all-things-cuttlefish
+  description: Cuttlefish Domain
+spec:
+  owner: cuttlefish-group
