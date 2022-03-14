@@ -69,7 +69,7 @@ metadata:
     "environment" : "production"
     "tier" : "frontend"
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main/docs
+    backstage.io/techdocs-ref: url:https://github.com/ryantaylor16/backstage
     github.com/project-slug: ryantaylor16/backstage
   tags:
     - java
