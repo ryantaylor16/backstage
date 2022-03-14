@@ -11,7 +11,7 @@ metadata:
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
-    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main
+    backstage.io/techdocs-ref: url:https://github.com/RoadieHQ/sample-service/tree/main/docs
   tags:
     - wordpress
   links:
