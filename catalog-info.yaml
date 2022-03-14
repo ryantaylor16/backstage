@@ -47,7 +47,7 @@ spec:
     displayName: Cory Finger
     email: cory@transposit.com
     picture: https://www.shareicon.net/data/512x512/2016/04/22/753637_wizard_512x512.png
-  memberOf: [Solutions]
+  memberOf: [Cuttlefish Group]
 ---
  apiVersion: backstage.io/v1alpha1
  kind: System
