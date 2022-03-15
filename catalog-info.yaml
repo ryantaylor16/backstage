@@ -7,7 +7,7 @@ spec:
   type: service-group
   profile:
     displayName: Cuttlefish Group
-    email: solutions@transposit.com
+    email: solutions@example.com
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg
   children: [Solutions]
   members: [ryan,cory]
@@ -21,7 +21,7 @@ spec:
   type: service-group
   profile:
     displayName: Solutions Engineering Group
-    email: solutions@transposit.com
+    email: solutions@example.com
     picture: https://cdn.shopify.com/s/files/1/0980/9618/products/north-drinkware-the-mt-hood-tumbler-11186413253.jpg
   parent: Cuttlefish
   children: []
@@ -34,7 +34,7 @@ metadata:
 spec:
   profile:
     displayName: Ryan Taylor
-    email: ryan@transposit.com
+    email: ryan@example.com
     picture: https://www.svgrepo.com/show/241591/clown-avatar.svg
   memberOf: [Solutions]
 ---
@@ -45,7 +45,7 @@ metadata:
 spec:
   profile:
     displayName: Cory Finger
-    email: cory@transposit.com
+    email: cory@example.com
     picture: https://www.shareicon.net/data/512x512/2016/04/22/753637_wizard_512x512.png
   memberOf: [Cuttlefish Group]
 ---
