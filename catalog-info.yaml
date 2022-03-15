@@ -91,6 +91,8 @@ spec:
   system: cuttlefish-tools-system
   dependsOn:
     - component:Neutrino
+  dependencyOf:
+    - component:petstore
   providesApis:
     - starwars-graphql
 ---
